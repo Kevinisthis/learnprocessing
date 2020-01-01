@@ -7,8 +7,11 @@ void setup() {
 }
 
 void draw() {
+  //draws columns
   for (int x = 0; x < width; x += 20) {
+    //draws rows
     for (int y = 0; y < height; y += 20) {
+      //colors based on distance
       float d = dist(mouseX, mouseY, x, y);
       if (d < 19) {
         fill(255,0,0);
@@ -22,8 +25,8 @@ void draw() {
       else {
         fill(0,0,225);
       }
+      //draws grid
       rect(x, y, 20, 20);
-      println(mouseX, mouseY, x, y, d);
     }
   }
 }
